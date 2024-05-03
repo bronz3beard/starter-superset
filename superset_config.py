@@ -109,29 +109,29 @@ PREVENT_UNSAFE_DB_CONNECTIONS = False
 # To embed dashboards, uncomment the TALISMAN_CONFIG and add your Superset URL to "frame-ancestors".  
 # If you are deploying for the first time, just start your superset app and Restack will provision an URL for you.
 
-# TALISMAN_CONFIG = { "content_security_policy": { 
-# "base-uri": ["'self'"],"default-src": ["'self'"], "img-src": [ 
-#       "'self'", 
-#       "blob:",
-#       "data:", 
-#       "https://apachesuperset.gateway.scarf.sh", 
-#       "https://static.scarf.sh/", 
-# ], 
-# "worker-src": ["'self'", "blob:"], "connect-src": [ 
-#       "'self'", 
-#       "https://api.mapbox.com", 
-#       "https://events.mapbox.com", 
-# ], 
-# "object-src": "'none'", "style-src": [ 
-# "'self'", 
-#       "'unsafe-inline'", 
-#     ], 
-# "script-src": ["'self'", "'strict-dynamic'"], 
-# "frame-ancestors": "your-domain.app"  
-# }, 
-# "content_security_policy_nonce_in": ["script-src"], "force_https": False, 
-# "session_cookie_secure": False, 
-# }
+TALISMAN_CONFIG = { "content_security_policy": { 
+"base-uri": ["'self'"],"default-src": ["'self'"], "img-src": [ 
+      "'self'", 
+      "blob:",
+      "data:", 
+      "https://apachesuperset.gateway.scarf.sh", 
+      "https://static.scarf.sh/", 
+], 
+"worker-src": ["'self'", "blob:"], "connect-src": [ 
+      "'self'", 
+      "https://api.mapbox.com", 
+      "https://events.mapbox.com", 
+], 
+"object-src": "'none'", "style-src": [ 
+"'self'", 
+      "'unsafe-inline'", 
+    ], 
+"script-src": ["'self'", "'strict-dynamic'"], 
+"frame-ancestors": "embedded-demo-restack.vercel.app"  
+}, 
+"content_security_policy_nonce_in": ["script-src"], "force_https": False, 
+"session_cookie_secure": False, 
+}
 
 
 # Data cache config 
@@ -148,7 +148,7 @@ CORS_OPTIONS = {
 "supports_credentials": True, 
 "allow_headers": ["*"], 
 "resources": ["*"],
-"origins": ["*"] # Replace this with a list of the domains you want to enable 
+"origins": ["embedded-demo-restack.vercel.app"] # Replace this with a list of the domains you want to enable 
 }
 
 # Superset specific config 
