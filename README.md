@@ -2,6 +2,7 @@
 
 Welcome to the Superset Restack Starter Repository! This repository serves as a template for building your own Apache Superset using Restack.
 
+
 ## About Restack
 
 [Restack](https://www.restack.io/) is the platform to run your favorite open source products: Build your custom image, scale cost-efficiently with no downtime and upgrade seamlessly to the latest release.
